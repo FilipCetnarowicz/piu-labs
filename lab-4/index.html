@@ -4,9 +4,62 @@
     <meta charset="UTF-8" />
     <title>Lab 4</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/logic.js" defer></script>
   </head>
   <body>
-    <h1>Lab 4</h1>
-    <a href="..">Powrót</a>
+    <header>
+      <h1>Lab 4</h1>
+    </header>
+    <main class="board">
+      <!--  -->
+      <section id="ToDo">
+        <header>
+          <h2>Do zrobienia</h2>
+          <div class="ColumnControls">
+            <button class="BtnAddCard">dodaj kartę</button>
+            <button class="BtnRecolorColumn">koloruj kolumnę</button>
+          </div>
+          <div class="ColumnData">
+            <button class="BtnSortColumn">sortuj</button>
+            <span>liczba kart: <span class="CardsCount">0</span></span>
+          </div>
+        </header>
+        <div class="cards"></div>
+      </section>
+      <!--  -->
+      <section id="Doing">
+        <header>
+          <h2>W trakcie</h2>
+          <div class="ColumnControls">
+            <button class="BtnAddCard">dodaj kartę</button>
+            <button class="BtnRecolorColumn">koloruj kolumnę</button>
+          </div>
+          <div class="ColumnData">
+            <button class="BtnSortColumn">sortuj</button>
+            <span>liczba kart: <span class="CardsCount">0</span></span>
+          </div>
+        </header>
+        <div class="cards"></div>
+      </section>
+      <!--  -->
+      <section id="Done">
+        <header>
+          <h2>Zrobione</h2>
+          <div class="ColumnControls">
+            <button class="BtnAddCard">dodaj kartę</button>
+            <button class="BtnRecolorColumn">koloruj kolumnę</button>
+          </div>
+          <div class="ColumnData">
+            <button class="BtnSortColumn">sortuj</button>
+            <span>liczba kart: <span class="CardsCount">0</span></span>
+          </div>
+        </header>
+        <div class="cards"></div>
+      </section>
+      <!--  -->
+    </main>
+    <footer>
+      <a href="..">Powrót</a>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/konkurs.css" />
+    <title>Konkurs</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-text">
+        Zgłoszenie<br />
+        do Konkursu Plastycznego
+      </div>
+      <button class="theme-toggle" aria-label="Zmień motyw">🌓</button>
+    </header>
+    <main>
+      <section>
+        <form>
+          <div>
+            <label> Imię: </label> <br />
+            <input type="text" maxlength="30" required />
+          </div>
+          <div>
+            <label> Nazwisko: </label> <br />
+            <input type="text" maxlength="50" required />
+          </div>
+          <div>
+            <label> Email: </label> <br />
+            <input type="email" required />
+          </div>
+          <div>
+            <label> Miasto: </label> <br />
+            <input
+              id="miasta"
+              type="text"
+              placeholder="Wpisz lub wybierz"
+              required
+            />
+            <datalist id="miasta">
+              <option value="Warszawa"></option>
+              <option value="Kraków"></option>
+              <option value="Gdańsk"></option>
+              <option value="Poznań"></option>
+              <option value="Wrocław"></option>
+            </datalist>
+          </div>
+        </form>
+      </section>
+      Miasto: Data urodzenia: Liczba zgłaszanych prac(od 1 do 6): Kolor wiodący
+      prac: Kategoria pracy:
+    </main>
+  </body>
+</html>

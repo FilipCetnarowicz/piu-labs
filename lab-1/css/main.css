@@ -1,0 +1,20 @@
+body {
+  background: hsl(0, 0%, 100%);
+}
+
+h1 {
+  text-decoration: underline;
+  text-align: left;
+  margin: 1vw;
+}
+
+nav ul {
+  font-weight: bold;
+  list-style-type: '>>    ';
+  margin: 1vw;
+}
+
+a {
+  text-align: center;
+  margin: 1vw;
+}

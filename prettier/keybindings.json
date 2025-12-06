@@ -1,0 +1,11 @@
+[
+  {
+    "key": "alt+x",
+    "command": "editor.emmet.action.wrapWithAbbreviation",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+t",
+    "command": "editor.action.inlineSuggest.trigger"
+  }
+]

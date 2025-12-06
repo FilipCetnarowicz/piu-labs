@@ -1,0 +1,33 @@
+{
+  "workbench.startupEditor": "none",
+  "editor.fontSize": 16,
+  "editor.guides.bracketPairs": true,
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.wordWrap": "on",
+  "explorer.confirmDelete": false,
+  "git.enableSmartCommit": true,
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "terminal.integrated.enablePersistentSessions": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+
+  "prettier.printWidth": 80,
+  "prettier.singleQuote": true,
+  "prettier.semi": true,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+
+  "[javascript]": {
+    "editor.tabSize": 4,
+    "prettier.tabWidth": 4
+  },
+  "git.autofetch": true,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "editor.inlineSuggest.enabled": false
+}
