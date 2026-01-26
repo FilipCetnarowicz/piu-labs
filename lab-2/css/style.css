@@ -7,13 +7,56 @@ html {
 body {
   margin: 1rem;
   padding: 0;
+  text-align: center;
 }
 
-a {
-  color: #0066cc; /* niebieski kolor linków */
-  text-decoration: none; /* bez podkreślenia */
-  font-size: 1.4rem;
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5vh;
+  padding-bottom: 0.5vh;
+  border-bottom: 0.1rem solid black;
+  display: inline-block;
 }
-a:hover {
-  text-decoration: underline; /* podkreślenie przy najechaniu */
+
+nav {
+  margin-bottom: 3vh;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    margin: 0.5rem 0;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 1.4rem;
+
+    &:hover {
+      text-decoration: underline; /* podkreślenie przy najechaniu */
+    }
+
+    &::before {
+      content: '»';
+      margin-right: 0.5rem;
+      color: #888;
+    }
+
+    &::after {
+      content: '«';
+      margin-left: 0.5rem;
+      color: #888;
+      pointer-events: none;
+    }
+  }
+}
+
+#back {
+  display: inline-block;
+  border-top: 0.1rem solid grey;
+  font-size: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 1.5vh;
 }
