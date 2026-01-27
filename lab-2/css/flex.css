@@ -3,3 +3,212 @@ body {
   margin: 0;
   padding: 1rem;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+header .theme-picker {
+  border: 0.15rem solid #d0844a;
+  border-radius: 0.5rem;
+  background-color: #f6f2dd;
+  label {
+    margin-right: 1.5rem;
+  }
+  input {
+    margin-right: 0.5rem;
+  }
+  legend {
+    font-weight: 600;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+header {
+  padding-bottom: 2rem;
+}
+
+.container {
+  border: 0.15rem solid #d0844a;
+  border-radius: 0.5rem;
+  background-color: #f6f2dd;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 1rem;
+  gap: 1rem;
+}
+.item {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  justify-content: center;
+  color: white;
+}
+
+/* ---------------------------------------------------------- */
+body:has(input[value='blue']:checked) {
+  .container {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .item {
+      background-color: blue;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 27%;
+      justify-content: center;
+    }
+  }
+  @media (max-width: 1024px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      .item {
+        flex-basis: 100%;
+        width: 50%;
+      }
+    }
+  }
+}
+
+/* ---------------------------------------------------------- */
+body:has(input[value='red']:checked) {
+  .container {
+    .item {
+      background-color: #dc3545;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 0;
+      &:nth-of-type(1) {
+        order: 3;
+        flex-grow: 2;
+        font-weight: bold;
+
+        &::after {
+          content: '\A(Jestem większy i na środku!)';
+          white-space: pre;
+          font-weight: normal;
+          font-size: 80%;
+        }
+        @media (max-width: 1024px) {
+          flex-basis: 100%;
+        }
+      }
+
+      &:nth-of-type(2) {
+        order: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      &:nth-of-type(3) {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      &:nth-of-type(4) {
+        order: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      &:nth-of-type(5) {
+        order: 5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+}
+/* ---------------------------------------------------------- */
+body:has(input[value='green']:checked) {
+  .container {
+    .item {
+      background-color: #28a745;
+      flex-basis: 0;
+
+      @media (max-width: 1024px) {
+        flex-basis: auto;
+        flex-grow: 0;
+      }
+
+      &:nth-of-type(1) {
+        flex-grow: 5;
+      }
+      &:nth-of-type(2) {
+        flex-grow: 4;
+      }
+      &:nth-of-type(3) {
+        flex-grow: 3;
+      }
+      &:nth-of-type(4) {
+        flex-grow: 2;
+      }
+      &:nth-of-type(5) {
+        flex-grow: 1;
+      }
+
+      &:nth-of-type(2) {
+        @media (max-width: 1024px) {
+          width: 85%;
+        }
+      }
+      &:nth-of-type(3) {
+        @media (max-width: 1024px) {
+          width: 70%;
+        }
+      }
+      &:nth-of-type(4) {
+        @media (max-width: 1024px) {
+          width: 55%;
+        }
+      }
+      &:nth-of-type(5) {
+        @media (max-width: 1024px) {
+          width: 40%;
+        }
+      }
+
+      &:nth-of-type(1) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+
+        &::before {
+          content: '😀';
+          font-size: 2em;
+          line-height: 1.5;
+          vertical-align: middle;
+        }
+
+        &::after {
+          content: '😀';
+          font-size: 2em;
+          line-height: 1.5;
+          vertical-align: middle;
+        }
+
+        @media (max-width: 1024px) {
+          width: 100%;
+          align-self: auto;
+        }
+      }
+    }
+    @media (max-width: 1024px) {
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      padding-left: 15%;
+    }
+  }
+}
